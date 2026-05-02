@@ -7,23 +7,30 @@ import shap
 import numpy as np
 from sklearn.pipeline import Pipeline
 
+# --- PAGE CONFIG ---
+st.set_page_config(layout="wide", page_title="Fab", page_icon="🛡️")
+
+# --- IMPORT USER MANUAL FUNCTION ---
+from manual import render_user_manual  # ✅ Must be imported before use
+
 # --- SIDEBAR ---
 with st.sidebar:
     st.title("🛡️ Fab")
-    
+
+    # Button to open manual
     show_manual = st.button("📖 Open User Manual")
+
     st.divider()
-    
     uploaded_file = st.file_uploader("Upload Sector Data (CSV)", type="csv")
-    
+
     if uploaded_file:
         mode = st.radio("Navigation", ["Global Overview", "Visual Insights", "Predictive Simulation"])
-    
+
     st.info("**Engine Status:** Phase 4 (Complete)")
 
 # --- MAIN CONTENT ---
 if show_manual:
-    render_user_manual()
+    render_user_manual()  # ✅ This now works correctly
     st.stop()  # Prevents dashboard from rendering below the manual
 
 # --- TRANSLATION DICTIONARY ---
