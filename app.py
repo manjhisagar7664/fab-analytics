@@ -22,12 +22,12 @@ with st.sidebar:
     
     st.divider()
     
-    uploaded_file = st.file_uploader("Upload Sector Data (CSV)", type="csv")[cite: 4]
+    uploaded_file = st.file_uploader("Upload Sector Data (CSV)", type="csv")
     
     if uploaded_file:
-        mode = st.radio("Navigation", ["Global Overview", "Visual Insights", "Predictive Simulation"])[cite: 4]
+        mode = st.radio("Navigation", ["Global Overview", "Visual Insights", "Predictive Simulation"])
     
-    st.info("**Engine Status:** Phase 4 (Complete)")[cite: 4]
+    st.info("**Engine Status:** Phase 4 (Complete)")
 
 # --- TRANSLATION DICTIONARY ---
 FEAT_MAP = {
