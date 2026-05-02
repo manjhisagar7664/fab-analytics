@@ -10,14 +10,24 @@ from sklearn.pipeline import Pipeline
 # --- PAGE CONFIG ---
 st.set_page_config(layout="wide", page_title="Fab", page_icon="🛡️")
 
+# --- NEW: USER MANUAL INTEGRATION ---
+# Import the function from your manual.py file
+from manual import render_user_manual 
+
 # --- SIDEBAR ---
 with st.sidebar:
     st.title("🛡️ Fab")
-    uploaded_file = st.file_uploader("Upload Sector Data (CSV)", type="csv")
+    
+    render_user_manual() 
+    
     st.divider()
+    
+    uploaded_file = st.file_uploader("Upload Sector Data (CSV)", type="csv")[cite: 4]
+    
     if uploaded_file:
-        mode = st.radio("Navigation", ["Global Overview", "Visual Insights", "Predictive Simulation"])
-    st.info("**Engine Status:** Phase 4 (Complete)")
+        mode = st.radio("Navigation", ["Global Overview", "Visual Insights", "Predictive Simulation"])[cite: 4]
+    
+    st.info("**Engine Status:** Phase 4 (Complete)")[cite: 4]
 
 # --- TRANSLATION DICTIONARY ---
 FEAT_MAP = {
