@@ -21,17 +21,17 @@ with st.sidebar:
     
     st.info("**Engine Status:** Phase 4 (Complete)")
 
+# --- MAIN CONTENT ---
+if show_manual:
+    render_user_manual()
+    st.stop()  # Prevents dashboard from rendering below the manual
+
 # --- TRANSLATION DICTIONARY ---
 FEAT_MAP = {
     'OrderCount': 'Engagement', 'Tenure': 'Loyalty', 'tenure': 'Account Age', 
     'CreditScore': 'Credit Standing', 'MonthlyCharges': 'Billing Level', 
     'Balance': 'Account Balance', 'NumOfProducts': 'Service Count'
 }
-
-# --- MAIN CONTENT ---
-if show_manual:
-    render_user_manual()
-    st.stop()  # Prevents dashboard from rendering below the manual
 
 
 # --- DATA ROUTING ---
