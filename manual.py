@@ -1,4 +1,3 @@
-# manual.py
 import streamlit as st
 
 def render_user_manual():
