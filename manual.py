@@ -9,7 +9,7 @@ def render_user_manual():
     st.header("1. System Overview")
     st.write("""
     FAB is a multi-sector churn prediction and retention analytics tool. 
-    It uses trained AI models to calculate risk scores, explain drivers of churn, 
+    It uses trained AI models to calculate risk scores, explain churn drivers, 
     and simulate retention strategies across Banking, Telecom, and E-Commerce sectors.
     """)
 
@@ -44,36 +44,26 @@ def render_user_manual():
     - `OrderCount`
     """)
 
-    st.header("3. Dashboard Options")
-    st.write("After uploading, choose a mode from the sidebar:")
-
+    st.header("3. Dashboard Modes")
     st.markdown("""
-    - **Global Overview**  
-      • Shows total customer base, average risk score, and number of critical alerts  
-      • Displays a sortable table with Risk Score, Status, and Strategic Focus  
-
-    - **Visual Insights**  
-      • Pie chart of account health breakdown (Stable, Warning, Critical)  
-      • Line chart showing risk progression trend by main feature  
-
-    - **Predictive Simulation**  
-      • Select a customer ID  
-      • Apply retention strategies (discounts, combo offers, dispute resolution)  
-      • Run simulation to see impact on risk score  
+    After uploading, choose a mode from the sidebar:
+    - **Global Overview:** Summary metrics and sortable risk table  
+    - **Visual Insights:** Pie chart and risk progression trend  
+    - **Predictive Simulation:** Apply retention strategies and simulate impact
     """)
 
     st.header("4. Outputs")
     st.markdown("""
     - **Risk_Score:** Probability of churn (0–100%)  
     - **Status:** 🟢 Stable, 🟡 Warning, 🔴 Critical  
-    - **Strategic_Focus:** Feature most influencing churn, derived from SHAP analysis  
+    - **Strategic_Focus:** Feature most influencing churn (via SHAP)
     """)
 
     st.header("5. Simulation Controls")
     st.markdown("""
     - **Discount (%):** Reduce monthly charges  
     - **Combo Offer:** Add an extra product/service  
-    - **Dispute Resolution:** Mark customer as satisfied (active member)  
+    - **Dispute Resolution:** Mark customer as satisfied (active member)
     """)
 
     st.header("6. Exporting Results")
